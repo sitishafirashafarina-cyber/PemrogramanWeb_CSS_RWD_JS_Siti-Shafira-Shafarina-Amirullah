@@ -1,0 +1,207 @@
+/* TEMA WARNA: UNGU (Perempuan NIM Ganjil) */
+:root {
+    --primary-color: #8B008B;
+    --secondary-color: #9932CC;
+    --light-color: #DDA0DD;
+    --dark-color: #4B0082;
+    --text-color: #2D1B33;
+    --bg-color: #F8F0FF;
+}
+
+/* Mode Rapi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.identity {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.identity h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.identity p {
+    font-size: 1.2em;
+}
+
+.introduction {
+    background-color: var(--light-color);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.introduction h2 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.introduction p {
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+.pollution-section {
+    margin-bottom: 30px;
+}
+
+.pollution-item {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.pollution-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pollution-title {
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: var(--dark-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pollution-title:hover {
+    background-color: var(--primary-color);
+}
+
+.pollution-content {
+    color: white;
+    font-size: 1.05em;
+    text-align: justify;
+    line-height: 1.8;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.pollution-content.hidden {
+    display: none;
+}
+
+.mode-button,
+.image-button {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.mode-button:hover,
+.image-button:hover {
+    background-color: var(--dark-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Mode Berantakan */
+body.messy-mode {
+    background-color: #FF1493;
+    color: #00FF00;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+body.messy-mode .container {
+    transform: rotate(-1deg);
+}
+
+body.messy-mode .identity {
+    background-color: #FF4500;
+    color: #FFFF00;
+    transform: skew(-2deg);
+    border: 5px dashed #00CED1;
+}
+
+body.messy-mode .introduction {
+    background-color: #9400D3;
+    color: #FFD700;
+    transform: rotate(1deg);
+    border: 3px solid #FF69B4;
+}
+
+body.messy-mode .pollution-item {
+    background-color: #32CD32;
+    transform: rotate(-0.5deg);
+    border: 4px dotted #FF1493;
+}
+
+body.messy-mode .pollution-title {
+    background-color: #FF6347;
+    color: #00FFFF;
+    text-shadow: 2px 2px #000080;
+}
+
+body.messy-mode .pollution-content {
+    background-color: #FFD700;
+    color: #8B008B;
+    border: 3px solid #00FF7F;
+}
+
+body.messy-mode .mode-button,
+body.messy-mode .image-button {
+    background-color: #FF00FF;
+    color: #FFFF00;
+    border: 5px solid #00FFFF;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Responsive untuk perangkat kecil */
+@media (max-width: 600px) {
+    .identity h1 {
+        font-size: 1.5em;
+    }
+    
+    .pollution-title {
+        font-size: 1.2em;
+    }
+}
